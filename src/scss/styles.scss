@@ -1,0 +1,69 @@
+$idCellWidth: 10%;
+
+.app {
+    transition: 300ms;
+    padding: 50px 0px;
+    min-height: 100vh;
+    background: #ececec;
+
+    header {
+        h1 {
+            color: #000;
+            margin: 0px;
+        }
+    }
+
+    main {
+        h2 {
+            text-align: center;
+        }
+
+        .messages-heading {
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            li {
+                background: #fff;
+                padding: 10px;
+                border: 1px solid #c4c4c4;
+                width: 22.5%;
+
+                &:first-child {
+                    width: $idCellWidth;
+                }
+
+                &:hover {
+                    background: #ececec;
+                }
+            }
+        }
+    }
+
+    .dark-mode-toggler {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    &.dark {
+        background: #343434;
+
+        header {
+            h1 {
+                color: #fff;
+            }
+        }
+
+        main {
+            h2 {
+                color: #fff
+            }
+        }
+    }
+}
