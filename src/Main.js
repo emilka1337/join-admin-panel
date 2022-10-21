@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Message from "./Message";
-// import ReqStateMessage from "./ReqStateMessage";
 
 export default function Main() {
     const [messages, setMessages] = useState([]);
@@ -20,7 +19,7 @@ export default function Main() {
             }
         );
     }, []);
-    
+
     if (requestState.inFlight) {
         return (
             <main className="container-lg py-4">
@@ -47,28 +46,6 @@ export default function Main() {
             </main>
         )
     }
-
-
-
-
-    // return (
-    //     <main className="container-lg py-4">
-    //         {
-    //             requestState.inFlight ? <h2>Loading...</h2> :
-    //                 requestState.error ? <h2>Error displaying messages :(</h2> :
-    //                     requestState.done ? () => {
-    //                         <ul className="messages-heading">
-    //                             <li>ID</li>
-    //                             <li>Full Name</li>
-    //                             <li>Email</li>
-    //                             <li>Text</li>
-    //                             <li>Submitted Date</li>
-    //                         </ul>
-    //                         { messages.map((message) => <Message message={message} key={message.id} />) }
-    //                     } : null
-    //         }
-    //     </main>
-    // )
 }
 
 //{ "id": 1, "fullName": "Matin Manafov", "email": "matin@gmail.com", "text": "tyrgr", "submittedDate": "0001-01-01T00:00:00" }, { "id": 2, "fullName": "Matin Manafov", "email": "matin@gmail.com", "text": "I am interested!", "submittedDate": "0001-01-01T00:00:00" }, { "id": 3, "fullName": "Matin Manafov", "email": "matin@gmail.com", "text": "sgdsg", "submittedDate": "0001-01-01T00:00:00" }
